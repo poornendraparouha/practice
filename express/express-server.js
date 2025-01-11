@@ -3,12 +3,8 @@ const express = require('express');
 const server = express();
 // define the port
 const port = 3000;
-// define the route(handle the default request)
-server.get('/', (req, res, next) => {
-    console.log('first middleware!');
-    next();
-});
 
+// define the route(handle the default request)
 server.get('/', (req, res) => {
     res.send('Welcome to express server!');
 });
